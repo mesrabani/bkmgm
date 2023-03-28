@@ -24,7 +24,7 @@ const CreateBook = (props) => {
     e.preventDefault();
 
     axios
-      .post('https://3000-srabanipatr-srabani-82x3nb8bews.ws-us90.gitpod.io/api/books', book)
+      .post('https://5000-srabanipatr-srabani-82x3nb8bews.ws-us92.gitpod.io/api/books/', book)
       .then((res) => {
         setBook({
           title: '',
@@ -40,6 +40,8 @@ const CreateBook = (props) => {
       })
       .catch((err) => {
         console.log('Error in CreateBook!');
+        console.log('The error is -> ')
+        console.log(err)
       });
   };
 
@@ -113,7 +115,6 @@ const CreateBook = (props) => {
                   onChange={onChange}
                 />
               </div>
-              
               <div className='form-group'>
                 <input
                   type='text'
